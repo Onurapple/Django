@@ -1,17 +1,40 @@
 {% extends 'base/base.html' %}
 {% block content %}
 
+
+
+
+
+<h1 style="text-align: center;">CREATE</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
 <div>{{ form }}</div>
+    <br />
+    <div class="w-full flex flex-auto">
+    <button type="submit" class="btn btn-outline-info bg-red justify-center">NEW</button></div>
+</form>
 
+<h1 style="text-align: center;">READ</h1>
+{% for contact in contacts %}
+<div style="color: blue;"> {{contact.id}} {{contact}}<a style="color: green;" href="update/{{contact.id}}"> Update </a> <a style="color: red;" href="delete/{{contact.id}}">Delete</a> </div>
+{% endfor %}
 
+<h1 style="text-align: center;">UPDATE</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>{{id}}{{ updateform }}</div>
+    <br />
+    <div class="w-full flex flex-auto">
+        <button type="submit" class="btn btn-outline-info bg-red justify-center">EDIT</button></div>
+</form>
 
-<h1 style="text-align: center;">User.App Başlık</h1>
-
-    {% for contact in contacts %}
-    <div>{{contact}}</div>
-    
-
-    {% endfor %}
-
+<h1 style="text-align: center;">DELETE</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div>{{ deletecontact }} silinsin mi?</div>
+    <br />
+<div class="w-full flex flex-auto">
+    <button type="submit" class="btn btn-outline-info bg-red justify-center">DELETE</button></div>
+</form>
 
 {% endblock %}

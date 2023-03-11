@@ -7,10 +7,10 @@ class Contacts(models.Model):
     number = models.IntegerField(blank=True, null=True)
 
     class Meta:
-        ordering = ['first_name']
+        # ordering = ['first_name']
         verbose_name_plural = "Kontaklar"
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"{self.number} {self.first_name} {self.last_name}"
     
 
