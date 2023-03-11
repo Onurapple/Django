@@ -1,4 +1,17 @@
 {% extends 'base/base.html' %}
 {% block content %}
-<div>USER2222.HTML den yazılan</div>
+
+<div>{{ form }}</div>
+
+
+
+<h1 style="text-align: center;">User.App Başlık</h1>
+
+    {% for contact in contacts %}
+    <div>{{contact}}</div>
+    
+
+    {% endfor %}
+
+
 {% endblock %}
