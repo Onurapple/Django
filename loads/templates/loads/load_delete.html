@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<h3>Delete Load</h3>
+<div>
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        Are you sure delete {{load}}?<br />
+        <input type="submit" value="Yes" />
+    </form>
+
+    <a href="{% url 'load_list'%}"> <button>No</button></a>
+</div>
+
+{% endblock content %}

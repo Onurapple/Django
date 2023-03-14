@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %}
+{% block content %}
+
+
+<h5>LOAD_Detail.HTML</h5>
+
+
+<!--<h1 style="text-align: center;">CREATE</h1>-->
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--    <div>{{ form }}</div>-->
+<!--    <br />-->
+<!--    <div class="w-full flex flex-auto">-->
+<!--        <button type="submit" class="btn btn-outline-info bg-red justify-center">NEW</button></div>-->
+<!--</form>-->
+
+
+
+<h1 style="text-align: center;">LOAD LİST detail: {{load}} </h1>
+<div style="color: blue;"><a href="detail/{{load.id}}">{{load}}</a> <a style="color: green;" href="update/{{contact.id}}"> Update </a> <a style="color: red;" href="delete/{{contact.id}}">Delete</a> </div>
+
+
+<!--<h1 style="text-align: center;">UPDATE</h1>-->
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--    <div>{{id}}{{ updateform }}</div>-->
+<!--    <br />-->
+<!--    <div class="w-full flex flex-auto">-->
+<!--        <button type="submit" class="btn btn-outline-info bg-red justify-center">EDIT</button></div>-->
+<!--</form>-->
+
+<!--<h1 style="text-align: center;">DELETE</h1>-->
+<!--<form method="POST" enctype="multipart/form-data">-->
+<!--    {% csrf_token %}-->
+<!--    <div>{{ deletecontact }} silinsin mi?</div>-->
+<!--    <br />-->
+<!--    <div class="w-full flex flex-auto">-->
+<!--        <button type="submit" class="btn btn-outline-info bg-red justify-center">DELETE</button></div>-->
+<!--</form>-->
+
+{% endblock %}

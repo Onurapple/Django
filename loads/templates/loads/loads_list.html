@@ -1,0 +1,22 @@
+
+{% extends 'base/base.html' %}
+{% block content %}
+
+
+<h5>LOAD_List.HTML</h5>
+
+
+
+    
+
+
+<h1 style="text-align: center;">LOAD LİST</h1>
+{% for load in loads %}
+<div style="color: blue;"><a href="detail/{{load.id}}">{{load}}</a> <a style="color: green;" href="update/{{load.id}}"> Update </a> <a style="color: red;" href="delete/{{load.id}}">Delete</a> </div>
+{% endfor %}
+
+<a class="w-full flex flex-auto" href="add/">
+    <button type="button"  class="btn btn-outline-info bg-red justify-center">ADD NEW</button></a>
+
+
+{% endblock %}
